@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b14mb6dlohiy1"]
+[gd_scene load_steps=3 format=3 uid="uid://b14mb6dlohiy1"]
 
 [ext_resource type="Texture2D" uid="uid://dsyrkoeq6kmao" path="res://icon.svg" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://dvesccor4da5w" path="res://art/myskis.png" id="2_0e48y"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(614, 279)
@@ -12,3 +13,7 @@ texture = ExtResource("1_wtcfe")
 
 [node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(206.7942, -27.045538)
+
+[node name="Myskis" type="Sprite2D" parent="."]
+position = Vector2(-179, -68)
+texture = ExtResource("2_0e48y")
