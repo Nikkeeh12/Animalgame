@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c16dd4ep42trd"]
+
+[ext_resource type="PackedScene" uid="uid://pudqggddtqeu" path="res://environment.tscn" id="1_o3c45"]
+[ext_resource type="PackedScene" uid="uid://dfld3k68rl38m" path="res://mc.tscn" id="2_dcy6p"]
+[ext_resource type="PackedScene" uid="uid://odaxjuf704p1" path="res://npc.tscn" id="3_8g206"]
+
+[node name="yhdistys" type="Node2D" unique_id=1892260295]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=978457453]
+
+[node name="environment" parent="Node2D" unique_id=1862619674 instance=ExtResource("1_o3c45")]
+
+[node name="Node2D2" parent="." unique_id=2047514781 instance=ExtResource("2_dcy6p")]
+
+[node name="npc" parent="Node2D2" unique_id=418053441 instance=ExtResource("3_8g206")]
+position = Vector2(511, 53)
