@@ -3,14 +3,34 @@
 [ext_resource type="PackedScene" uid="uid://pudqggddtqeu" path="res://environment.tscn" id="1_o3c45"]
 [ext_resource type="PackedScene" uid="uid://dfld3k68rl38m" path="res://mc.tscn" id="2_dcy6p"]
 [ext_resource type="PackedScene" uid="uid://odaxjuf704p1" path="res://npc.tscn" id="3_8g206"]
+[ext_resource type="PackedScene" uid="uid://df66jfysjo5xh" path="res://ground.tscn" id="4_dcy6p"]
 
 [node name="yhdistys" type="Node2D" unique_id=1892260295]
 
-[node name="Node2D" type="Node2D" parent="." unique_id=978457453]
+[node name="alue 1" type="Node2D" parent="." unique_id=1425599003]
 
-[node name="environment" parent="Node2D" unique_id=1862619674 instance=ExtResource("1_o3c45")]
+[node name="buildings" type="Node2D" parent="alue 1" unique_id=978457453]
 
-[node name="Node2D2" parent="." unique_id=2047514781 instance=ExtResource("2_dcy6p")]
+[node name="buildings" parent="alue 1/buildings" unique_id=1862619674 instance=ExtResource("1_o3c45")]
 
-[node name="npc" parent="Node2D2" unique_id=418053441 instance=ExtResource("3_8g206")]
-position = Vector2(511, 53)
+[node name="ground" parent="alue 1" unique_id=1268897846 instance=ExtResource("4_dcy6p")]
+z_index = -1
+
+[node name="mc" parent="alue 1" unique_id=2047514781 instance=ExtResource("2_dcy6p")]
+
+[node name="npc" parent="alue 1" unique_id=418053441 instance=ExtResource("3_8g206")]
+position = Vector2(402, 4)
+
+[node name="alue 2" type="Node2D" parent="." unique_id=1287709999]
+
+[node name="buildings" type="Node2D" parent="alue 2" unique_id=425989033]
+position = Vector2(1254, -1)
+
+[node name="buildings" parent="alue 2/buildings" unique_id=2078503482 instance=ExtResource("1_o3c45")]
+
+[node name="npc2" parent="alue 2" unique_id=338752979 instance=ExtResource("3_8g206")]
+position = Vector2(1775, 32)
+
+[node name="ground" parent="alue 2" unique_id=1092621188 instance=ExtResource("4_dcy6p")]
+z_index = -1
+position = Vector2(1254, -1)
