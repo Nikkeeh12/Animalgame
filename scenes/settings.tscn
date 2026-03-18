@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://d21btj7t0rb72"]
+
+[ext_resource type="Script" uid="uid://dxynu2876p260" path="res://scenes/settings.gd" id="1_nkug2"]
+[ext_resource type="AudioStream" uid="uid://dr5p5m5jbmqiq" path="res://audio/Non Non Biyori OST Disc 2 - 20 - Daydreaming Recorder.mp3" id="3_3ykye"]
+
+[node name="Settings" type="Node2D" unique_id=195956177]
+script = ExtResource("1_nkug2")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=265856331]
+self_modulate = Color(1, 1, 1, 0.10980392)
+position = Vector2(320, 160)
+scale = Vector2(4.984375, 2.4843752)
+
+[node name="Control" type="Control" parent="." unique_id=1144132109]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 328.0
+offset_top = 102.0
+offset_right = 368.0
+offset_bottom = 142.0
+
+[node name="back" type="Button" parent="Control" unique_id=966100217]
+layout_mode = 0
+offset_left = -313.0
+offset_top = 134.0
+offset_right = -122.0
+offset_bottom = 204.0
+text = "Go back"
+
+[node name="Settings" type="Control" parent="." unique_id=1195605800]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Settings" unique_id=1785008042]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 59.0
+offset_top = 32.0
+offset_right = 539.0
+offset_bottom = 177.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings/MarginContainer" unique_id=822915865]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Settings/MarginContainer/VBoxContainer" unique_id=519551389]
+layout_mode = 2
+text = "Volume"
+
+[node name="volume" type="HSlider" parent="Settings/MarginContainer/VBoxContainer" unique_id=138003899]
+layout_mode = 2
+min_value = -50.0
+max_value = 25.0
+step = 12.5
+tick_count = 7
+
+[node name="NonNonBiyoriOstDisc220DaydreamingRecorder" type="AudioStreamPlayer" parent="." unique_id=1964937595]
+stream = ExtResource("3_3ykye")
+volume_db = -30.0
+autoplay = true
+
+[connection signal="pressed" from="Control/back" to="." method="_on_back_pressed"]
+[connection signal="value_changed" from="Settings/MarginContainer/VBoxContainer/volume" to="." method="_on_volume_value_changed"]

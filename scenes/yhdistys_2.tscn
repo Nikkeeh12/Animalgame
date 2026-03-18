@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://5mqrfike22do"]
+
+[ext_resource type="PackedScene" uid="uid://df66jfysjo5xh" path="res://scenes/ground.tscn" id="1_ixmwc"]
+[ext_resource type="PackedScene" uid="uid://c2ausilko3ikr" path="res://scenes/buildings_2.tscn" id="2_n6a68"]
+[ext_resource type="PackedScene" uid="uid://dfld3k68rl38m" path="res://scenes/mc.tscn" id="3_uajbq"]
+[ext_resource type="PackedScene" uid="uid://dlgsrb8037uc0" path="res://scenes/portal.tscn" id="5_ixqva"]
+[ext_resource type="Script" uid="uid://dtwj0ppcoijt6" path="res://scenes/portal2.gd" id="5_n88kj"]
+
+[node name="yhdistys2" type="Control" unique_id=661706683]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="alue2" type="Node2D" parent="." unique_id=332871966]
+
+[node name="ground" parent="alue2" unique_id=1268897846 instance=ExtResource("1_ixmwc")]
+z_index = -1
+
+[node name="buildings2" parent="alue2" unique_id=1060412276 instance=ExtResource("2_n6a68")]
+
+[node name="Node2D" parent="alue2" unique_id=2047514781 instance=ExtResource("3_uajbq")]
+position = Vector2(-143, -36)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=398535289]
+modulate = Color(0.52906674, 0.5290667, 0.5290667, 1)
+light_mask = 0
+z_index = -16
+layout_mode = 0
+offset_left = -185.0
+offset_top = -148.0
+offset_right = 1087.0
+offset_bottom = 490.0
+
+[node name="Area2D" parent="." unique_id=115607648 instance=ExtResource("5_ixqva")]
+position = Vector2(330, -41)
+script = ExtResource("5_n88kj")
+
+[node name="fade" parent="Area2D" index="0" unique_id=804949687]
+position = Vector2(517.6269, 245.00002)
+scale = Vector2(0.41024828, 0.19548428)
+
+[node name="CollisionShape2D" parent="Area2D" index="1" unique_id=1283889223]
+position = Vector2(674, 246)
+
+[editable path="alue2/buildings2"]
+[editable path="alue2/Node2D"]
+[editable path="alue2/Node2D/player/interactComponent"]
+[editable path="Area2D"]

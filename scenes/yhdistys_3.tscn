@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://d3m838rggtdra"]
+
+[ext_resource type="PackedScene" uid="uid://df66jfysjo5xh" path="res://scenes/ground.tscn" id="1_mcoqx"]
+[ext_resource type="PackedScene" uid="uid://bci8kabps6han" path="res://scenes/buildings_3.tscn" id="2_djt5a"]
+[ext_resource type="PackedScene" uid="uid://dfld3k68rl38m" path="res://scenes/mc.tscn" id="3_v12tr"]
+[ext_resource type="PackedScene" uid="uid://dlgsrb8037uc0" path="res://scenes/portal.tscn" id="4_b1eeb"]
+[ext_resource type="PackedScene" uid="uid://ldyfbh6yanli" path="res://scenes/npc2.tscn" id="4_djt5a"]
+
+[node name="yhdistys_3" type="Control" unique_id=2024327859]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="alue3" type="Node2D" parent="." unique_id=1107820471]
+
+[node name="ground" parent="alue3" unique_id=1268897846 instance=ExtResource("1_mcoqx")]
+
+[node name="buildings_3" parent="alue3" unique_id=143153578 instance=ExtResource("2_djt5a")]
+
+[node name="Node2D" parent="alue3" unique_id=2047514781 instance=ExtResource("3_v12tr")]
+position = Vector2(-143, -36)
+
+[node name="npc" parent="alue3" unique_id=338752979 instance=ExtResource("4_djt5a")]
+position = Vector2(248, 63)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1305461102]
+modulate = Color(0.52906674, 0.5290667, 0.5290667, 1)
+light_mask = 0
+z_index = -16
+layout_mode = 0
+offset_left = -185.0
+offset_top = -148.0
+offset_right = 1087.0
+offset_bottom = 490.0
+
+[node name="Area2D" parent="." unique_id=115607648 instance=ExtResource("4_b1eeb")]
+position = Vector2(330, -41)
+
+[node name="fade" parent="Area2D" index="0" unique_id=804949687]
+position = Vector2(517.6269, 245.00002)
+scale = Vector2(0.41024828, 0.19548428)
+
+[node name="CollisionShape2D" parent="Area2D" index="1" unique_id=1283889223]
+position = Vector2(674, 246)
+
+[editable path="alue3/buildings_3"]
+[editable path="alue3/Node2D"]
+[editable path="alue3/Node2D/player/interactComponent"]
+[editable path="Area2D"]
