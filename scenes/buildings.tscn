@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://q40qusve75hr"]
+
+[ext_resource type="Texture2D" uid="uid://coyxkt3n6w5v7" path="res://art/building_house2.png" id="1_14b2l"]
+[ext_resource type="Texture2D" uid="uid://1ld3dae5irii" path="res://art/talo_placeholder_160x104.png" id="1_lhg5x"]
+[ext_resource type="Texture2D" uid="uid://b0t8oy3wwqofb" path="res://art/building_store.png" id="3_3wc8t"]
+[ext_resource type="Texture2D" uid="uid://dtu4nbhbnk43h" path="res://art/building_house.png" id="4_k6d5c"]
+[ext_resource type="Texture2D" uid="uid://bhymss8rvvrko" path="res://art/building_cafeteria.png" id="5_edsdr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2eiut"]
+size = Vector2(158.99985, 16)
+
+[node name="buildings" type="Node2D" unique_id=1862619674]
+position = Vector2(-107, -48)
+
+[node name="house1" type="Sprite2D" parent="." unique_id=896387753]
+position = Vector2(187, 100)
+texture = ExtResource("5_edsdr")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="house1" unique_id=2097768637]
+position = Vector2(0, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="house1/StaticBody2D" unique_id=82297859]
+position = Vector2(1, 1)
+scale = Vector2(1.0000011, 1.0000001)
+shape = SubResource("RectangleShape2D_2eiut")
+
+[node name="house2" type="Sprite2D" parent="." unique_id=591606246]
+position = Vector2(347, 100)
+texture = ExtResource("4_k6d5c")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="house2" unique_id=1658632084]
+position = Vector2(0, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="house2/StaticBody2D" unique_id=104174194]
+position = Vector2(0, 1.0000038)
+scale = Vector2(1.0000011, 1.0000001)
+shape = SubResource("RectangleShape2D_2eiut")
+
+[node name="house3" type="Sprite2D" parent="." unique_id=1411720757]
+position = Vector2(507, 100)
+texture = ExtResource("3_3wc8t")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="house3" unique_id=1738249737]
+position = Vector2(0, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="house3/StaticBody2D" unique_id=798411353]
+position = Vector2(0, 1)
+scale = Vector2(1.0000011, 1.0000001)
+shape = SubResource("RectangleShape2D_2eiut")
+
+[node name="house4" type="Sprite2D" parent="." unique_id=168309278]
+position = Vector2(666, 100)
+texture = ExtResource("1_14b2l")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="house4" unique_id=1816939842]
+position = Vector2(0, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="house4/StaticBody2D" unique_id=1666359505]
+position = Vector2(0, 1)
+scale = Vector2(1.0000011, 1.0000001)
+shape = SubResource("RectangleShape2D_2eiut")
+
+[node name="house5" type="Sprite2D" parent="house4" unique_id=1526344775]
+position = Vector2(160, 0)
+texture = ExtResource("1_lhg5x")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="house4/house5" unique_id=484140635]
+position = Vector2(0, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="house4/house5/StaticBody2D" unique_id=1440404007]
+position = Vector2(0, 1)
+scale = Vector2(1.0000011, 1.0000001)
+shape = SubResource("RectangleShape2D_2eiut")
+
+[node name="house6" type="Sprite2D" parent="." unique_id=225307149]
+position = Vector2(986, 100)
+texture = ExtResource("1_lhg5x")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="house6" unique_id=33785895]
+position = Vector2(0, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="house6/StaticBody2D" unique_id=687175423]
+position = Vector2(0, 1)
+scale = Vector2(1.0000011, 1.0000001)
+shape = SubResource("RectangleShape2D_2eiut")

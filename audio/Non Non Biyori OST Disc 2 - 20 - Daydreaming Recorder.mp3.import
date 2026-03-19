@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dr5p5m5jbmqiq"
+path="res://.godot/imported/Non Non Biyori OST Disc 2 - 20 - Daydreaming Recorder.mp3-da195141b6055a725fe4ab30a77568f2.mp3str"
+
+[deps]
+
+source_file="res://audio/Non Non Biyori OST Disc 2 - 20 - Daydreaming Recorder.mp3"
+dest_files=["res://.godot/imported/Non Non Biyori OST Disc 2 - 20 - Daydreaming Recorder.mp3-da195141b6055a725fe4ab30a77568f2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

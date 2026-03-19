@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://cm8e52sid3avh"]
+
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_723fy"]
+[ext_resource type="Script" uid="uid://beq7d2f4hlba1" path="res://sprite_2d.gd" id="2_4ltwa"]
+
+[node name="peli" type="Node2D" unique_id=617906557]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1104623740]
+position = Vector2(426, 391)
+texture = ExtResource("1_723fy")
+script = ExtResource("2_4ltwa")
+
+[node name="ProgressBar" type="ProgressBar" parent="Sprite2D" unique_id=1994007496]
+offset_left = -233.0
+offset_top = -365.0
+offset_right = 501.0
+offset_bottom = -278.0
+max_value = 10.0
+value = 10.0
+show_percentage = false
+
+[node name="Button" type="Button" parent="." unique_id=299384417]
+offset_left = 662.0
+offset_top = 174.0
+offset_right = 862.0
+offset_bottom = 283.0
+theme_override_font_sizes/font_size = 50
+text = "+hp
+"
+
+[node name="Button2" type="Button" parent="." unique_id=1144551842]
+offset_left = 665.0
+offset_top = 336.0
+offset_right = 866.0
+offset_bottom = 435.0
+theme_override_font_sizes/font_size = 50
+text = "-hp"
+
+[node name="point" type="Button" parent="." unique_id=469347089]
+offset_left = 76.0
+offset_top = 468.0
+offset_right = 277.0
+offset_bottom = 567.0
+theme_override_font_sizes/font_size = 50
+text = "+point"
+
+[node name="Label" type="Label" parent="." unique_id=794831063]
+offset_left = 21.0
+offset_top = 166.0
+offset_right = 313.0
+offset_bottom = 235.0
+theme_override_font_sizes/font_size = 50
+text = "Point count:"
+
+[connection signal="pressed" from="Button" to="Sprite2D" method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="Sprite2D" method="_on_button_2_pressed"]
+[connection signal="pressed" from="point" to="Sprite2D" method="_on_point_pressed"]

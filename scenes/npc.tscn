@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://odaxjuf704p1"]
+
+[ext_resource type="Script" uid="uid://eh1gratovevq" path="res://scenes/npc.gd" id="1_kh24r"]
+[ext_resource type="Texture2D" uid="uid://bo8beo5kn1roe" path="res://art/player_diskolisko.png" id="2_rv78h"]
+[ext_resource type="PackedScene" uid="uid://cpj10eq8m4rf8" path="res://interact_stuff/interactable.tscn" id="3_ul7y6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rv78h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bc6q4"]
+radius = 49.0408
+
+[node name="npc" type="StaticBody2D" unique_id=338752979]
+script = ExtResource("1_kh24r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1234580152]
+position = Vector2(75, 143)
+shape = SubResource("CircleShape2D_rv78h")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=746860315]
+position = Vector2(74, 136)
+texture = ExtResource("2_rv78h")
+
+[node name="Interactable" parent="." unique_id=118510929 instance=ExtResource("3_ul7y6")]
+interact_name = "Puhu diskoliskolle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=1417474467]
+position = Vector2(74, 137)
+shape = SubResource("CircleShape2D_bc6q4")
