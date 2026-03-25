@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://cm8e52sid3avh"]
+
+[ext_resource type="Script" uid="uid://bxugqnugtnuf1" path="res://player.gd" id="1_4ltwa"]
+[ext_resource type="Texture2D" uid="uid://c14v12hnd6k7o" path="res://Screenshot 2026-03-25 221518.png" id="2_itmq7"]
+[ext_resource type="Texture2D" uid="uid://b2omn46x8ecsh" path="res://pngegg.png" id="4_itmq7"]
+[ext_resource type="Texture2D" uid="uid://f6m2rr5e0ush" path="res://dango.jpg" id="4_jk4ga"]
+[ext_resource type="Script" uid="uid://bacrwfvt43tip" path="res://point.gd" id="4_lgshf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jk4ga"]
+radius = 54.083275
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ltwa"]
+radius = 28.0
+height = 432.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lgshf"]
+radius = 29.0
+
+[node name="peli" type="Node2D" unique_id=617906557]
+
+[node name="player" type="Node2D" parent="." unique_id=1138237711]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="player" unique_id=837384177]
+script = ExtResource("1_4ltwa")
+
+[node name="Sprite2D" type="Sprite2D" parent="player/CharacterBody2D" unique_id=1104623740]
+position = Vector2(97.00001, 398)
+scale = Vector2(0.23513108, 0.24245343)
+texture = ExtResource("2_itmq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player/CharacterBody2D" unique_id=1837243750]
+position = Vector2(97.99999, 401.00006)
+shape = SubResource("CircleShape2D_jk4ga")
+
+[node name="Label" type="Label" parent="player/CharacterBody2D" unique_id=190351691]
+offset_left = 1.0
+offset_top = 291.0
+offset_right = 114.0
+offset_bottom = 336.0
+theme_override_font_sizes/font_size = 30
+
+[node name="danger" type="Area2D" parent="." unique_id=622228911]
+position = Vector2(422, 215)
+
+[node name="Sprite2D" type="Sprite2D" parent="danger" unique_id=676604249]
+position = Vector2(97, 310.5)
+scale = Vector2(0.15200001, 0.60600007)
+texture = ExtResource("4_jk4ga")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="danger" unique_id=1589503876]
+position = Vector2(97, 374)
+shape = SubResource("CapsuleShape2D_4ltwa")
+
+[node name="danger" type="Area2D" parent="danger" unique_id=162850519]
+position = Vector2(1, -426)
+
+[node name="Sprite2D" type="Sprite2D" parent="danger/danger" unique_id=2027535819]
+position = Vector2(97, 310.5)
+rotation = -3.1415927
+scale = Vector2(0.15200001, 0.60600007)
+texture = ExtResource("4_jk4ga")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="danger/danger" unique_id=1516530111]
+position = Vector2(97, 243)
+shape = SubResource("CapsuleShape2D_4ltwa")
+
+[node name="point" type="Area2D" parent="." unique_id=2035262189]
+position = Vector2(677, 311)
+script = ExtResource("4_lgshf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="point" unique_id=499643049]
+position = Vector2(2, 2)
+shape = SubResource("CircleShape2D_lgshf")
+
+[node name="Sprite2D" type="Sprite2D" parent="point" unique_id=562429467]
+position = Vector2(-25, -7.6293945e-06)
+scale = Vector2(0.08554687, 0.081944436)
+texture = ExtResource("4_itmq7")
+
+[node name="point" type="Area2D" parent="point" unique_id=1845039821]
+position = Vector2(-158, -1)
+script = ExtResource("4_lgshf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="point/point" unique_id=980251332]
+position = Vector2(2, 2)
+shape = SubResource("CircleShape2D_lgshf")
+
+[node name="Sprite2D" type="Sprite2D" parent="point/point" unique_id=649018557]
+position = Vector2(-25, 0)
+scale = Vector2(0.08554687, 0.081944436)
+texture = ExtResource("4_itmq7")
+
+[node name="point" type="Area2D" parent="point/point" unique_id=68907090]
+position = Vector2(-158, -1)
+script = ExtResource("4_lgshf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="point/point/point" unique_id=2071183822]
+position = Vector2(2, 2)
+shape = SubResource("CircleShape2D_lgshf")
+
+[node name="Sprite2D" type="Sprite2D" parent="point/point/point" unique_id=488827815]
+position = Vector2(-25, 0)
+scale = Vector2(0.08554687, 0.081944436)
+texture = ExtResource("4_itmq7")
+
+[connection signal="body_entered" from="danger" to="player/CharacterBody2D" method="_on_danger_body_entered"]
+[connection signal="body_entered" from="danger/danger" to="player/CharacterBody2D" method="_on_danger_body_entered"]
+[connection signal="body_entered" from="point" to="player/CharacterBody2D" method="_on_point_body_entered"]
+[connection signal="body_entered" from="point" to="point" method="_on_body_entered"]
+[connection signal="body_entered" from="point/point" to="player/CharacterBody2D" method="_on_point_body_entered"]
+[connection signal="body_entered" from="point/point" to="point/point" method="_on_body_entered"]
+[connection signal="body_entered" from="point/point/point" to="player/CharacterBody2D" method="_on_point_body_entered"]
+[connection signal="body_entered" from="point/point/point" to="point/point/point" method="_on_body_entered"]

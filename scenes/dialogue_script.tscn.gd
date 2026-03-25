@@ -1,5 +1,9 @@
 extends Control
 
+func _ready():
+	Dialogic.start("Dialogue1")
+
+
 @onready var player = get_tree().get_first_node_in_group("player")
 # func _unhandled_input(event):
 #	if event.is_action_pressed("interact"):

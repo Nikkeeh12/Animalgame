@@ -46,6 +46,7 @@ position = Vector2(674, 246)
 
 [editable path="alue 1/mc"]
 [editable path="alue 1/mc/player/interactComponent"]
+[editable path="alue 1/mc/CanvasLayer/Virtual Joystick"]
 [editable path="alue 1/npc"]
 [editable path="alue 1/npc/Interactable"]
 [editable path="Area2D"]
